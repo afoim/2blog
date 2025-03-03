@@ -1,0 +1,77 @@
+baseURL: "https://2blog.onani.cn"
+title: "网站标题"
+LanguageCode: "zh-CN"
+theme: "PaperMod"
+
+# 启用首页个人简介展示
+params:
+  # 是否启用评论。你需要自己配置，或者直接引入Giscus等评论系统
+  comments: false
+  # 是否显示代码复制按钮
+  ShowCodeCopyButtons: true
+  # 是否显示面包屑导航
+  ShowBreadCrumbs: false
+  # 是否显示阅读时间  
+  ShowReadingTime: true
+  # 是否显示分享按钮
+  ShowShareButtons: true
+  # 分享按钮配置
+  # ShareButtons: ["linkedin", "twitter"]
+  # 是否禁用主题切换按钮
+  disableThemeToggle: false
+  assets:
+    favicon: "https://q2.qlogo.cn/headimg_dl?dst_uin=2726730791&spec=5" # 需要在static文件夹放置对应的图片
+    iconHeight: 35
+  # 首页信息配置
+  homeInfoParams:
+    Title: "首页展示的标题"
+    Content: >
+      首页展示的文本
+
+  # 设置网站头像和首页头像
+  profileMode:
+    enabled: false # 设为 true 将完全替换 homeInfoParams
+
+  # 网站头像设置 (显示在导航栏)
+  label:
+    text: "左上角显示的文本"
+    # icon: "https://q2.qlogo.cn/headimg_dl?dst_uin=2726730791&spec=5" # 这将显示在导航栏标题旁边。需要在static文件夹放置对应的图片
+    iconHeight: 35
+
+  # 社交图标 (显示在简介下方)
+  socialIcons:
+    - name: bilibili
+      url: ""
+    - name: github
+      url: ""
+    - name: telegram
+      url: ""
+    # 可以添加更多社交图标 https://github.com/adityatelange/hugo-PaperMod/wiki/Icons
+
+# 顶部导航栏的快捷链接
+menu:
+  main:
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 30
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 40
+    # 可以添加更多导航链接。weight的值越高排序越靠后
+
+# 如果要启用搜索功能，需要添加这个
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # 必须，用于搜索功能
